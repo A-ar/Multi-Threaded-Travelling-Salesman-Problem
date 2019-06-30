@@ -11,9 +11,9 @@ class TSP extends Thread{
     static int isp,n;
     static double[] mi={Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE};
     static ArrayList<Double>[] pass=new ArrayList[3];
-    Hashtable<String, ArrayList<Double>> map=new Hashtable<>();
+    static Hashtable<String, ArrayList<Double>> map=new Hashtable<>();
     public void run(){
-        for (int g = (n / 3)*pass_flag + 1; g < (n*(pass_flag+1)) / 3; g++) {
+        for (int g = (n / 3)*pass_flag; g < (n*(pass_flag+1)) / 3; g++) {
             if (g != isp) {
                 ArrayList<Double> temp = cost(n, g, sp, n, pass_flag);
                 double var = temp.get(0) + dist(p[g], sp);
