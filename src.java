@@ -27,7 +27,7 @@ class TSP extends Thread{
     static int isp,n;         //isp is the index of the starting point n is total points
     static double[] min;//just a minimum value for each section.
     static ArrayList<Double>[] answer;   //answer stored here. the one is chosen with the smallest cost
-    static ConcurrentHashMap<String,ArrayList<Double>> map= new ConcurrentHashMap<>(); //this is the only object which is shared by all three threads.
+    static ConcurrentHashMap<String,ArrayList<Double>> map= new ConcurrentHashMap<>(); //this is the only object which is shared by all the threads.
     //The run methods works like this:
     //depending on the value of pass flag(0,1....tn) thread 1 will run a loop for points 0 to n/tn.
     // thread 2 will run a loop for points n/tn to 2n/tn.
