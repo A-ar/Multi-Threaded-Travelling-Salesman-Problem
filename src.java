@@ -32,7 +32,7 @@ class TSP extends Thread{
     //depending on the value of pass flag(0,1....tn) thread 1 will run a loop for points 0 to n/tn.
     // thread 2 will run a loop for points n/tn to 2n/tn.
     // thread 3 will run a loop for points 2n/tn to 3n/tn.
-    // thread tn will run a loop for points (tn-1)*n/tn to n/
+    // thread tn will run a loop for points (tn-1)*n/tn to n.
     // The answer with minimum cost will be stored in the answer arraylist vector.
     public void run(){
         for (int g = (n / tn)*pass_flag; g < (n*(pass_flag+1)) / tn; g++) {
